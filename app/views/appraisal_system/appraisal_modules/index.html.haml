@@ -1,0 +1,7 @@
+= link_to 'Add new module', new_appraisal_module_path, class: 'btn btn-default dropdown-toggle'
+- @modules.each do |appraisal_module|
+  .panel.panel-default
+    .panel-heading
+      %h3.panel-title= appraisal_module.name
+    .panel-body
+      = appraisal_module.description

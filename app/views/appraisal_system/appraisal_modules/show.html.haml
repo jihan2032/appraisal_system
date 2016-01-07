@@ -1,0 +1,16 @@
+.page-head
+  .page-title
+    %h1
+      = "#{@appraisal_module.name} module"
+      %span.tooltips{title: "Module Settings", 'data-placement' => 'right'}
+        = link_to edit_appraisal_module_path(@appraisal_module) do
+          %i.fa.fa-cogs
+.portlet.box.red
+  .portlet-title
+    .caption
+      %i.fa.fa-info
+      Description
+  .portlet-body.form
+    .form-body
+      = @appraisal_module.description
+= render 'modules'
